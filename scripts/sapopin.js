@@ -14,34 +14,43 @@ function saPopIn($pix, $op, $speed){
     
     // array to hold each element   
     $el = $($("[data-sapopin]"));  
-    // checks for the directional indicator and adds styles accordingly
-    for (i = 0 ; i < $el.length ; i++){
-        
-        // this makes sure we apply the pop-in styles only to elements that are not alrady 
-        //  in view, i.e. elements who's offset().top, its position from the top, is
-        //  bigger than the height of the current window.
-        if (  ($($el[i])).offset().top > $vh  ){
+    
+    // function gets the document ready, i.e. offsets all boxes we are addresssing
+    var readyDocuemnt = function(){
+        // checks for the directional indicator and adds styles accordingly
+        for (i = 0 ; i < $el.length ; i++){
 
-            if ($($el[i]).attr("data-sapopin") === "right"){
-                $($el[i]).css("left", $pix +"px");      
+            // this makes sure we apply the pop-in styles only to elements that are not alrady 
+            //  in view, i.e. elements who's offset().top, its position from the top, is
+            //  bigger than the height of the current window.
+            if (  ($($el[i])).offset().top > $vh  ){
+
+                if ($($el[i]).attr("data-sapopin") === "right"){
+                    $($el[i]).css("left", $pix +"px");      
+                }
+                else if ($($el[i]).attr("data-sapopin") === "left"){
+                    $($el[i]).css("left", -$pix +"px");      
+                }
+                else{
+                    $($el[i]).css("top", $pix +"px");  
+                }   
+                // adds other styles needed
+                $($el[i]).css("position", "relative");
+                $($el[i]).css("opacity", $op);
+                $($el[i]).css("transition", "all " +$speed+"s");
             }
-            else if ($($el[i]).attr("data-sapopin") === "left"){
-                $($el[i]).css("left", -$pix +"px");      
-            }
-            else{
-                $($el[i]).css("top", $pix +"px");  
-            }   
-            // adds other styles needed
-            $($el[i]).css("position", "relative");
-            $($el[i]).css("opacity", $op);
-            $($el[i]).css("transition", "all " +$speed+"s");
         }
     }
-
+    // executes the function from above.
+    readyDocuemnt();
     // when the window scrolls
     $(window).scroll( function(){
         // position scrolled from the top
         var $wp = $(window).scrollTop();
+        // if the scrollposition is zero pixels from the top, (re)-ready the docuemnt
+        if ($wp === 0){
+            readyDocuemnt();   
+        }
         // current height of view (distance from top to bottom of browser windwo)
         var $vh = "innerHeight" in window 
            ? window.innerHeight
@@ -57,5 +66,4 @@ function saPopIn($pix, $op, $speed){
     });
 }
 
-// performs the action when the document is ready
-$(function(){saPopIn(50, 0.1, 0.5);});
+$(function(){saPopIn(50, 0.1, 0.3);});
