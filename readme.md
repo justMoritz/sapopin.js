@@ -4,6 +4,8 @@
 
 A simple and easy jQuery based Plug-In that allows elements in your document to “pop in” when they are scrolled into view. Either from the bottom (default), the left or the right.
 
+When the page is scrolled back to the very top, and then scrolled back down, the elements will pop into view again.
+
 ## _BASIC SETUP_:
 You need to have two things: 
 
