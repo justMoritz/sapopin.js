@@ -1,6 +1,6 @@
 # SA(scollimate) Pop-In
 
-## ABOUT:
+### ABOUT:
 
 A simple and easy jQuery based Plug-In that allows elements in your document to “pop in” when they are scrolled into view. Either from the bottom (default), the left or the right.
 
@@ -63,7 +63,10 @@ The third number is the amount of time it takes for the element to slide/pop in,
     ```
 
 
+---
 
+
+(c) 2016 by Moritz Zimmer
 
 
 
