@@ -11,7 +11,6 @@ function saPopIn($pix, $op, $speed){
            ? window.innerHeight
            : document.documentElement.offsetHeight; 
     
-    
     // array to hold each element   
     $el = $($("[data-sapopin]"));  
     
@@ -26,13 +25,13 @@ function saPopIn($pix, $op, $speed){
             if (  ($($el[i])).offset().top > $vh  ){
 
                 if ($($el[i]).attr("data-sapopin") === "right"){
-                    $($el[i]).css("left", $pix +"px");      
+                    $($el[i]).css("transform", "translate3D("+ -$pix+"px, 0px, 0px)");         
                 }
                 else if ($($el[i]).attr("data-sapopin") === "left"){
-                    $($el[i]).css("left", -$pix +"px");      
+                    $($el[i]).css("transform", "translate3D("+$pix+"px, 0px, 0px)");        
                 }
                 else{
-                    $($el[i]).css("top", $pix +"px");  
+                    $($el[i]).css("transform", "translate3D(0px, "+$pix+"px, 0px)");  
                 }   
                 // adds other styles needed
                 $($el[i]).css("position", "relative");
@@ -58,8 +57,8 @@ function saPopIn($pix, $op, $speed){
         // for each element, make the pop-in happen
         for (i = 0 ; i < $el.length ; i++){
             if ( $wp > $($el[i]).offset().top-$vh ){
-                $($el[i]).css("top", "0");
-                $($el[i]).css("left", "0");
+                $($el[i]).css("transform", "translate3D(0px, 0px, 0px)");  
+//                $($el[i]).css("left", "0");
                 $($el[i]).css("opacity", "1");
             }
         }   
