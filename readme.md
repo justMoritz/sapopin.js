@@ -1,5 +1,7 @@
 # SA(scollimate) Pop-In
 
+![SA Pop-In Sample](http://files.moritzzimmer.com/popin.gif "SA Popin Sample")
+
 ### ABOUT:
 
 A simple and easy jQuery based Plug-In that allows elements in your document to “pop in” when they are scrolled into view. Either from the bottom (default), the left or the right.
