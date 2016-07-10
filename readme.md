@@ -1,6 +1,7 @@
 # SA(scollimate) Pop-In
 
 [SA Pop-In Sample]: http://files.moritzzimmer.com/popin.gif "SAPOPIN Samples"
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 ### ABOUT:
 
