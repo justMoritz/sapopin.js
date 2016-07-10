@@ -1,6 +1,6 @@
 # SA(scollimate) Pop-In
 
-![SA Pop-In Sample](http://files.moritzzimmer.com/popin.gif "SA Popin Sample")
+[SA Pop-In Sample]: http://files.moritzzimmer.com/popin.gif "SAPOPIN Samples"
 
 ### ABOUT:
 
