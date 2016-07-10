@@ -34,7 +34,6 @@ function saPopIn($pix, $op, $speed){
                     $($el[i]).css("transform", "translate3D(0px, "+$pix+"px, 0px)");  
                 }   
                 // adds other styles needed
-//                $($el[i]).css("position", "relative");
                 $($el[i]).css("opacity", $op);
                 $($el[i]).css("transition", "all " +$speed+"s");
             }
@@ -58,7 +57,6 @@ function saPopIn($pix, $op, $speed){
         for (i = 0 ; i < $el.length ; i++){
             if ( $wp > $($el[i]).offset().top-$vh ){
                 $($el[i]).css("transform", "translate3D(0px, 0px, 0px)");  
-//                $($el[i]).css("left", "0");
                 $($el[i]).css("opacity", "1");
             }
         }   
