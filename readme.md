@@ -1,5 +1,5 @@
 # SA(scollimate) Pop-In
-
++![Folding in action](https://github.com/tshort/markdown-folder/raw/master/markdown-folder-mdpad.gif)
 
 ### ABOUT:
 
