@@ -1,7 +1,5 @@
 # SA(scollimate) Pop-In
 
-[SA Pop-In Sample]: http://files.moritzzimmer.com/popin.gif?raw=true "SAPOPIN Samples"
-
 
 ### ABOUT:
 
