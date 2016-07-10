@@ -41,22 +41,21 @@ This number controls the _starting_ visibility of the element. 0.0 means it is c
 #### Third Number: 
 The third number is the amount of time it takes for the element to slide/pop in, as measured in seconds.
 
-
 ---
 
 ### Warnings:
 
-* This new version of this Plugin now uses transform: translate3D. If you are already applying styles to the element using transform3d, they will most likely be overridden. To prevent this, you might chose to wrap the inside of the lement element with anther div or span element, and apply the attribute to it.
+* This new version of this Plugin now uses transform: translate3D. If you are already applying styles to the element using transform3d, they will most likely be overridden. To prevent this, you might chose to wrap the inside of the element element with anther div or span element, and apply the `data-sapopin` attribute to it, OR consider ...
 
 
-### position:relative version:
+#### ...using the position:relative version:
 
 * Because translate3d might also make this version not as compatible with some browsers, so you may chose to use an older version on the “position” branch instead.
 
 
-### Outdated Warnings:
+#### Additional Warnings RE: position:relative version
 
-* This Plugin moves elements using inline-CSS and the `position` attribute, in `relative` positioning. This does mean that if you have your element already positioned relatively via a stylesheet, it will most likely be overwritten. To prevent this, you might chose to wrap the inside of the lement element with anther div or span element, and apply the attribute to it, thuswise:
+* This version moves elements using inline-CSS and the `position` attribute, in `relative` positioning. This does mean that if you have your element already positioned relatively via a stylesheet, it will most likely be overwritten. To prevent this, you might chose to wrap the inside of the lement element with anther div or span element, and apply the attribute to it, thuswise:
 
 - starting point:
     ```
